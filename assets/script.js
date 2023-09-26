@@ -1,7 +1,7 @@
 var welcome = document.getElementById("welcome");
 var start = document.getElementById("start");
 var answers = document.getElementsByClassName("answer");
-var corrects = ["2. alerts","3. parentheses"];
+var corrects = ["2. alerts","3. parentheses","4. all the above","3. quotes"];
 
 // Create function to advance questions slides and evaluate responses
 function nextQuestion(event) {
@@ -43,3 +43,8 @@ start.addEventListener("click", nextQuestion);
 for (var i=0; i<answers.length;i++) {
     answers[i].addEventListener("click", nextQuestion);
 }
+
+
+
+
+
