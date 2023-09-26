@@ -31,13 +31,11 @@ button {
     color: white;
     padding: 12px 26px;
     border-radius: 15px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     line-height: 20px;
     margin: 6px;
-    font-weight: bolder;
     border: none;
-
 }
 
 body {
@@ -62,6 +60,29 @@ main {
     align-items: center;
     text-align: center;
     margin: 20px auto;
-    max-width: 60%;
+    max-width: 50%;
+}
 
+.question {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.answer {
+    margin: 10px;
+    background-color: var(--purple);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 6px 6px 6px 30px;
+    border: none;
+    min-width: 200px;
+    text-align: left;
+}
+
+#q1 {
+    display: none;
 }
