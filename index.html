@@ -15,11 +15,11 @@
   <body>
     <header>
         <h3>View high scores</h3>
-        <h4>Time:</h4>
+        <h4>Time: <span id="time">75</span></h4>
     </header>
     <main id="welcome">
         <h1>Code Quiz Challenge</h1>
-        <p>Complete all the questions! The quiz is timed and each wrong answer runs down the clock. Do you have what it takes?</p>
+        <p>Complete all the questions! The quiz is timed and each wrong answer loses you 10 seconds from the clock. Do you have what it takes?</p>
         <button data-question-number="0" id="start" type="button">Start Quiz</button>
     </main>
 
@@ -65,7 +65,7 @@
 
     <main class="question" id="q5">
       <h2>All done!</h2>
-      <p>Your final score is <span></span>.</p>
+      <p>Your final score is <span id="score"></span>.</p>
       <p>
         <label for="initials">Add your initials: </label>
         <input id="initials" type="text">

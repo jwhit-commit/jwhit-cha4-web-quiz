@@ -60,13 +60,12 @@ main {
     align-items: center;
     text-align: center;
     margin: 20px auto;
-    max-width: 50%;
+    max-width: 60%;
 }
 
 .question {
     text-align: left;
     align-items: flex-start;
-    max-width: 60%;
 }
 
 .answer {
@@ -84,7 +83,7 @@ main {
     text-align: left;
 }
 
-#q1,#q2,#q3,#q4 {
+#q1,#q2,#q3,#q4,#q5 {
     display: none;
 }
 
