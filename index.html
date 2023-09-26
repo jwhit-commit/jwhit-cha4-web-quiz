@@ -15,11 +15,20 @@
         <h3>View high scores</h3>
         <h4>Time:</h4>
     </header>
-    <main>
+    <main id="welcome">
         <h1>Code Quiz Challenge</h1>
-        <p>Complete the following quiz questions! The quiz is timed and each wrong answer runs down the clock quicker. Do you have what it takes?</p>
-        <button type="button">Start Quiz</button>
+        <p>Complete all the questions! The quiz is timed and each wrong answer runs down the clock. Do you have what it takes?</p>
+        <button data-question-number="0" id="start" type="button">Start Quiz</button>
     </main>
+    <main class="question" id="q1">
+      <h2>Commonly used data types DO NOT include:</h2>
+      <ol>
+        <li><button class="answer" data-question-number="1" type="button">1. strings</button></li>
+        <li><button class="answer" data-question-number="1" type="button">2. alerts</button></li>
+        <li><button class="answer" data-question-number="1" type="button">3. boolean</button></li>
+        <li><button class="answer" data-question-number="1" type="button">4. numbers</button></li>
+      </ol>
+  </main>
     <script src="./assets/script.js"></script>
   </body>
 </html>
