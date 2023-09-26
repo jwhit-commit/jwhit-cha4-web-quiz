@@ -66,6 +66,7 @@ main {
 .question {
     text-align: left;
     align-items: flex-start;
+    max-width: 60%;
 }
 
 .answer {
@@ -83,6 +84,19 @@ main {
     text-align: left;
 }
 
-#q1 {
+#q1,#q2,#q3,#q4 {
     display: none;
+}
+
+hr {
+    border-width: 2px;
+    width: 100%;
+    margin: 20px 0 6px 0;
+}
+
+h5 {
+    font-size: 26px;
+    color: gray;
+    font-family: "Rubik";
+
 }
