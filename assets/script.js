@@ -2,6 +2,7 @@ var welcome = document.getElementById("welcome");
 var start = document.getElementById("start");
 var q5 = document.getElementById('q5')
 var answers = document.getElementsByClassName("answer");
+var questions = document.getElementsByClassName("question");
 var corrects = ["2. alerts","3. parentheses","4. all the above","3. quotes"];
 var newInitials = document.getElementById("initials");
 var submitBtn = document.getElementById("submit");
@@ -25,6 +26,10 @@ function startTimer(event) {
 
         if (timer === 0) {
             clearInterval(timerInterval);
+            for (var i=0; i<questions.length;i++) {
+                questions[i].style.display = "none";
+            }
+            document.getElementById('q5').style.display = "flex";
         } else if (q5.style.display == "flex") {
             clearInterval(timerInterval);
         }
@@ -78,6 +83,8 @@ function saveInitials(event) {
 
     localStorage.setItem("playerInitials",initials);
 }
+
+//Create function that saves initials and score as a pair
 
 // Add click listeners to buttons that will trigger question response function and summary
 start.addEventListener("click", nextQuestion);
