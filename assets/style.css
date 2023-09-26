@@ -2,11 +2,12 @@
     --pink: rgb(196, 51, 196);
     --dark: black;
     --gray: rgb(181, 181, 181);
-    --purple: purple;
+    --purple: rgb(78, 0, 78);
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: "Raleway", sans-serif;
+    margin: 10px;
 }
 
 h1 {
@@ -21,16 +22,34 @@ p {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 20px;
+    margin: 6px;
+}
+
+button {
+    margin: 10px;
+    background-color: var(--purple);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 15px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 6px;
+    font-weight: bolder;
+    border: none;
+
 }
 
 body {
-    margin: 20px 40px;
+    margin: 20px 80px;
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 40px 0;
+    
 }
 
 h3 {
@@ -40,8 +59,9 @@ h3 {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    margin: 20px ;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 60%;
 
 }
