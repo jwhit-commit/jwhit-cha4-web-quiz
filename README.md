@@ -4,7 +4,7 @@ This coding quiz will test your Javascript knowledge. Get through all the questi
 
 Viewable at: https://jwhit-commit.github.io/jwhit-cha4-web-quiz/
 
-!([Quiz mockup](https://github.com/jwhit-commit/jwhit-cha4-web-quiz/blob/main/assets/Code_Quiz_Preview.png?raw=true))
+!([Quiz mockup](https://github.com/jwhit-commit/jwhit-cha4-web-quiz/blob/main/assets/Code_Quiz_Preview.png))
 
 ## Install
 
