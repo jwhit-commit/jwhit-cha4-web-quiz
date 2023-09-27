@@ -83,7 +83,7 @@ main {
     text-align: left;
 }
 
-#q1,#q2,#q3,#q4,#q5 {
+#q1,#q2,#q3,#q4,#q5,#q6 {
     display: none;
 }
 
@@ -102,4 +102,10 @@ h5 {
 .submit {
     font-size: 12px;
     padding: 6px 12px;
+}
+
+li {
+    font-size: 20px;
+    margin: 10px;
+    font-family: "Roboto";
 }

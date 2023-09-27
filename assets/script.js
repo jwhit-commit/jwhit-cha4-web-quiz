@@ -1,6 +1,7 @@
 var welcome = document.getElementById("welcome");
 var start = document.getElementById("start");
-var q5 = document.getElementById('q5')
+var q5 = document.getElementById('q5');
+var q6 = document.getElementById('q6');
 var answers = document.getElementsByClassName("answer");
 var questions = document.getElementsByClassName("question");
 var corrects = ["2. alerts","3. parentheses","4. all the above","3. quotes"];
@@ -9,6 +10,14 @@ var submitBtn = document.getElementById("submit");
 var time = document.getElementById("time")
 var timer = time.textContent;
 var finalAnswers = [];
+var highScores = JSON.parse(localStorage.getItem("highScores"));
+var goscores = document.getElementById("goscores");
+var scoreslist = document.getElementById("scoreslist");
+
+if (highScores == null) {
+    highScores = []
+}
+
 
 for (var i=0; i<answers.length;i++) {
     if (answers[i].dataset.questionNumber == 4) {
@@ -29,7 +38,7 @@ function startTimer(event) {
             for (var i=0; i<questions.length;i++) {
                 questions[i].style.display = "none";
             }
-            document.getElementById('q5').style.display = "flex";
+            q5.style.display = "flex";
         } else if (q5.style.display == "flex") {
             clearInterval(timerInterval);
         }
@@ -73,20 +82,37 @@ function nextQuestion(event) {
 }
 
 
-// Create function to save initials to local storage
+// Create function to save initials and scores to localStorage scores array
 function saveInitials(event) {
     event.preventDefault();
-    localStorage.clear();
 
     var initials = newInitials.value.trim();
-    console.log(initials);
+    var newScore = initials.concat(" - ", timer);
+    
+    highScores.push(newScore);
+    localStorage.setItem("highScores",JSON.stringify(highScores));
 
-    localStorage.setItem("playerInitials",initials);
+    showScores();
 }
 
-//Create function that saves initials and score as a pair
 
-// Add click listeners to buttons that will trigger question response function and summary
+// Create function to display scores 
+function showScores() {
+    welcome.style.display = "none";
+    for (var i=0; i<questions.length;i++) {
+        questions[i].style.display = "none";
+    }
+    q6.style.display = "flex";
+    for (var i=0; i<highScores.length;i++) {
+        var listitem = document.createElement("li"); 
+        listitem.textContent = highScores[i];
+        scoreslist.appendChild(listitem);
+    }    
+}
+
+
+
+// Add click listeners to buttons that will trigger question response function, summary, and high score screen
 start.addEventListener("click", nextQuestion);
 
 start.addEventListener("click", startTimer);
@@ -97,5 +123,4 @@ for (var i=0; i<answers.length;i++) {
 
 submitBtn.addEventListener("click", saveInitials);
 
-
-
+goscores.addEventListener("click",showScores);
